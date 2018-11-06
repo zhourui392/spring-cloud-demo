@@ -1,0 +1,24 @@
+server:
+  port: 9999
+
+spring:
+  application:
+    name: monitor-server
+  aop:
+    auto: true
+    proxy-target-class: true
+  mvc:
+    async:
+      request-timeout: -1
+
+endpoints:
+  health:
+    sensitive: false
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    leaseRenewalIntervalInSeconds: 5
+  client:
+    serviceUrl:
+      defaultZone: http://zz:123456@localhost:2222/eureka/

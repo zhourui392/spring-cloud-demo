@@ -1,0 +1,35 @@
+---
+spring:
+  application:
+    name: spring-cloud-eureka
+server:
+  port: 2222
+security:
+  basic:
+    enabled: true
+  user:
+    password: 123456
+    name: zz
+eureka:
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 5000
+  environment: dev
+  client:
+    register-with-eureka: false
+    serviceUrl:
+      defaultZone: http://zz:123456@localhost:2222/eureka/
+    fetch-registry: false
+    service-url:
+      roncooZone: http://zz:123456@localhost:2222/eureka/
+    region: lll
+    availability-zones:
+      roncoo: roncooZone
+  datacenter: roncoo
+info:
+  build:
+    artifact: @project.artifactId@
+    groupId: @project.groupId@
+    name: @project.name@
+    description: @project.description@
+    version: @project.version@

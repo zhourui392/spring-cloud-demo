@@ -1,0 +1,49 @@
+---
+spring:
+  application:
+    name: spring-cloud-consumer
+  zipkin:
+    base-url: http://localhost:9000
+server:
+  port: 8886
+management:
+  security:
+    enabled: false
+spring-cloud-provider:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+eureka:
+  instance:
+    instanceId: ${spring.application.name}:${random.value}
+    status-page-url-path: /info
+    prefer-ip-address: true
+    lease-expiration-duration-in-seconds: 45
+    lease-renewal-interval-in-seconds: 15
+  client:
+    serviceUrl:
+      defaultZone: http://zz:123456@localhost:2222/eureka/
+    registry-fetch-interval-seconds: 30
+
+logging:
+  level:
+    com:
+      zz:
+        education:
+          feign: debug
+
+feign:
+  compression:
+    request:
+      mime-types: text/xml,application/xml,application/json
+      min-request-size: 2048
+      enabled: true
+    response:
+      enabled: true
+
+info:
+  build:
+    artifact: @project.artifactId@
+    groupId: @project.groupId@
+    name: @project.name@
+    description: @project.description@
+    version: @project.version@

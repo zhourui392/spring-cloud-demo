@@ -1,0 +1,39 @@
+spring:
+  zipkin:
+    base-url: http://localhost:9000
+  application:
+    name: spring-cloud-gateway
+server:
+  port: 9100
+management:
+  security:
+    enabled: false
+eureka:
+  instance:
+    instanceId: ${spring.application.name}:${random.value}
+    status-page-url-path: /info
+    prefer-ip-address: true
+    lease-expiration-duration-in-seconds: 45
+    lease-renewal-interval-in-seconds: 15
+  client:
+    serviceUrl:
+      defaultZone: http://zz:123456@localhost:2222/eureka/
+    registry-fetch-interval-seconds: 30
+info:
+  build:
+    artifact: @project.artifactId@
+    groupId:  @project.groupId@
+    name:  @project.name@
+    description: @project.description@
+    version: @project.version@
+
+zuul:
+  host:
+    connect-timeout-millis : 10000
+    socket-timeout-millis : 30000
+  sensitive-headers : token
+  routes:
+    admin:
+      path : /user/**
+      stripPrefix : false
+      serviceId : spring-cloud-consumer
