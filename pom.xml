@@ -14,7 +14,9 @@
 	<modules>
 		<module>spring-cloud-bean</module>
 		<module>spring-cloud-eureka</module>
+		<module>spring-cloud-config</module>
 		<module>spring-cloud-consumer</module>
+		<module>spring-cloud-consumer-config</module>
 		<module>spring-cloud-provider</module>
 		<module>spring-cloud-provider2</module>
 		<module>spring-cloud-turbine</module>

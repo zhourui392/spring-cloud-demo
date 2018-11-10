@@ -9,10 +9,10 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>spring-cloud-consumer</artifactId>
+	<artifactId>spring-cloud-consumer-config</artifactId>
 	<packaging>jar</packaging>
 
-	<name>spring-cloud-consumer</name>
+	<name>spring-cloud-consumer-config</name>
 	<description>spring-cloud project for Spring Boot</description>
 
 	<dependencies>

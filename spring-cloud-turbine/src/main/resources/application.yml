@@ -4,7 +4,7 @@ spring:
     name: spring-cloud-turbine
 turbine:
   app-config: spring-cloud-consumer,spring-cloud-consumer2
-  cluster-name-expression: 'default'
+  cluster-name-expression: new String('default')
 server:
   port: 9998
 management:
