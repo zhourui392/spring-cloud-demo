@@ -1,0 +1,6 @@
+spring-cloud-provider:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+spring:
+  zipkin:
+    base-url: http://localhost:9000
