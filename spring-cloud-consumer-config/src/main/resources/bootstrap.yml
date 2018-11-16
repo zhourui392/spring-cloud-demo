@@ -1,0 +1,27 @@
+server:
+  port: 7001
+spring:
+  application:
+    name: spring-cloud-consumer
+  # 配置中心
+  cloud:
+    config:
+      name: ${spring.application.name}
+      profile: dev
+      label: master
+      fail-fast: true
+      # 表示使用服务发现组件中的Config Server，而不自己指定Config Server的uri，默认false
+      discovery:
+        enabled: true
+        # 指定Config Server在服务发现中的serviceId，默认是configserver
+        serviceId: spring-cloud-config-server
+#      uri: http://localhost:4000
+
+
+# 注册中心
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://zz:123456@localhost:2222/eureka/

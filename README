@@ -1,0 +1,23 @@
+
+端口
+eureka: 2222
+
+monitor: 9999
+
+gateway: 5555
+
+spring-config:4000
+
+consumer:7000
+localhost:7000/hystrix.stream
+
+consumer-config:7001
+
+
+provider: 6000
+provider2: 6001
+
+turbine: 9998
+localhost:9998/turbine.stream
+
+zipkin: 9000

@@ -5,7 +5,7 @@ spring:
   zipkin:
     base-url: http://localhost:9000
 server:
-  port: 8886
+  port: 7000
 management:
   security:
     enabled: false

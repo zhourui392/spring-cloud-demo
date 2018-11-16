@@ -5,7 +5,7 @@ spring:
   application:
     name: spring-cloud-provider
 server:
-  port: 7778
+  port: 6000
 management:
   security:
     enabled: false

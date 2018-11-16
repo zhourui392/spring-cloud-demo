@@ -4,7 +4,7 @@ spring:
   application:
     name: spring-cloud-gateway
 server:
-  port: 9100
+  port: 5555
 management:
   security:
     enabled: false

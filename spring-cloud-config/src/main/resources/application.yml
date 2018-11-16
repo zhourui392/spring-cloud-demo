@@ -1,8 +1,8 @@
 server:
-  port: 4001
+  port: 4000
 spring:
   application:
-    name: spring-cloud-config
+    name: spring-cloud-config-server
   # 配置中心
   cloud:
     config:
@@ -17,3 +17,7 @@ eureka:
   client:
     service-url:
       defaultZone: http://zz:123456@localhost:2222/eureka/
+
+management:
+  security:
+    enabled: false

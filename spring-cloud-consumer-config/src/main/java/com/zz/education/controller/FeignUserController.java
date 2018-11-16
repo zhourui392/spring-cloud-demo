@@ -12,7 +12,7 @@ import javax.annotation.Resource;
  * @author zhourui
  */
 @RestController
-@RequestMapping(value = "/feign/user", method = RequestMethod.POST)
+@RequestMapping(value = "/feign/user")
 public class FeignUserController {
 
 	@Resource

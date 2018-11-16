@@ -19,7 +19,7 @@ import javax.annotation.Resource;
  * @author zhourui
  */
 @RestController
-@RequestMapping(value = "/user", method = RequestMethod.POST)
+@RequestMapping(value = "/user")
 public class UserController {
 
 	@Resource
